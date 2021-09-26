@@ -24,6 +24,6 @@ routes.delete('/produto/:_id', Produto.delete);
 routes.put('/produto', Produto.update);
 
 //Scrapper
-routes.get('/scrapper', WebScrapper.index);
+routes.post('/scrapper', WebScrapper.index);
 
 module.exports = routes;
