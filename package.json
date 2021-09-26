@@ -1,0 +1,57 @@
+{
+  "name": "mern",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "bcrypt": "^5.0.1",
+    "concurrently": "^6.0.2",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "eslint-plugin-jest": "^24.1.5",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.3",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7",
+    "puppeteer": "^10.4.0"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "client": "npm start --prefix client",
+    "server": "nodemon server.js",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest",
+      "plugin:prettier/recommended"
+    ]
+  },
+  "prettier": {
+    "printWidth": 90,
+    "bracketSpacing": false,
+    "trailingComma": "es5"
+  },
+  "devDependencies": {
+    "@babel/preset-react": "^7.12.13",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb": "17.1.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.2.1"
+  },
+  "author": "Kamilla Rodrigues",
+  "license": "ISC"
+}
