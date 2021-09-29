@@ -10,8 +10,8 @@ const port = process.env.PORT || 5000;
 
 mongoose.connect(process.env.MONGO_URL || 'mongodb://localhost:27017/curso-basico-mern', {
   useUnifiedTopology: true,
-  useNewUrlParser: true,
-  useFindAndModify: false
+  useNewUrlParser: true
+  //useFindAndModify: false
 }, function (error) {
   if (error) {
     console.log(error);
