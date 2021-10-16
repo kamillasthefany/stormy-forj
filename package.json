@@ -8,12 +8,16 @@
     "concurrently": "^6.2.2",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
     "eslint-plugin-jest": "^24.4.2",
     "express": "^4.17.1",
     "mongoose": "^6.0.8",
     "nodemon": "^2.0.13",
     "path": "^0.12.7",
-    "puppeteer": "^10.4.0"
+    "pg": "^8.7.1",
+    "pg-hstore": "^2.3.4",
+    "puppeteer": "^10.4.0",
+    "sequelize": "^6.7.0"
   },
   "main": "index.js",
   "scripts": {
@@ -25,7 +29,8 @@
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "back": "nodemon src/server.js"
   },
   "eslintConfig": {
     "extends": [
@@ -50,7 +55,8 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.0",
-    "prettier": "^2.4.1"
+    "prettier": "^2.4.1",
+    "sequelize-cli": "^6.2.0"
   },
   "author": "Kamilla Rodrigues",
   "license": "ISC"

@@ -23,6 +23,11 @@ export const Card = styled.div`
   align-self: center;
   backdrop-filter: blur(3px);
 
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10%;
+
 `;
 
 export const Container = styled.div`
