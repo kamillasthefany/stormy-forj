@@ -31,7 +31,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "back": "nodemon src/server.js"
+    "back": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": [
