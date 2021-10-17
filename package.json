@@ -26,12 +26,10 @@
     "heroku-postbuild": "npm run install-client && npm run build",
     "client": "npm start --prefix client",
     "server": "nodemon server.js",
-    "teste": "nodemon index.js",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "back": "nodemon server.js"
+    "lint:fix": "eslint --fix ."
   },
   "eslintConfig": {
     "extends": [
