@@ -1,6 +1,10 @@
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(process.env.DATABASE_URL, {
+  define: {
+    timestamps: true,
+    underscored: true,
+  },
   dialectOptions: {
     ssl: {
       rejectUnauthorized: false,
@@ -8,10 +12,9 @@ const sequelize = new Sequelize(process.env.DATABASE_URL, {
   },
 });
 
-//check connection (optional)
 sequelize
   .authenticate()
-  .then(() => console.log("Connection has been established successfully."))
-  .catch((err) => console.error("Unable to connect to the database:", err));
+  .then(() => console.log("Conectado com sucesso"))
+  .catch((error) => console.error("Erro ao conectar: ", error));
 
 module.exports = sequelize;
